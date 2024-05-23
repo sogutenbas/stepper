@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/stepper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"> <a href="#"> <img src="img/Green Mark.svg" alt=""> </a> </div>
+
+            <ul class="links">
+                <li> <a href="">Carboon Footprint Calculation</a> </li>
+                <li><a href="">What is the Carbon Footprint?</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <a href="login.html" class="action_btn">Login</a>
+        </nav>
+    </header>
+
+    <div id="multi-step-form-container">
+        <!-- Form Steps / Progress Bar -->
+        <ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
+            <!-- Step 1 -->
+            <li class="form-stepper-active text-center form-stepper-list" step="1">
+                <a class="mx-2">
+                    <span class="form-stepper-circle">
+                        <span>%10</span>
+                    </span>
+                    <div class="label">Welcome</div>
+                </a>
+            </li>
+            <!-- Step 2 -->
+            <li class="form-stepper-unfinished text-center form-stepper-list" step="2">
+                <a class="mx-2">
+                    <span class="form-stepper-circle text-muted">
+                        <span>%20</span>
+                    </span>
+                </a>
+            </li>
+            <!-- Step 3 -->
+            <li class="form-stepper-unfinished text-center form-stepper-list" step="3">
+                <a class="mx-2">
+                    <span class="form-stepper-circle text-muted">
+                        <span>%30</span>
+                    </span>
+                </a>
+            </li>
+            <!-- Step 4 -->
+            <li class="form-stepper-unfinished text-center form-stepper-list" step="4">
+                <a class="mx-2">
+                    <span class="form-stepper-circle text-muted">
+                        <span>%40</span>
+                    </span>
+                </a>
+            </li>
+            <!-- Step 5 -->
+            <li class="form-stepper-unfinished text-center form-stepper-list" step="5">
+                <a class="mx-2">
+                    <span class="form-stepper-circle text-muted">
+                        <span>%50</span>
+                    </span>
+                </a>
+            </li>
+            <!-- Step 6 -->
+            <li class="form-stepper-unfinished text-center form-stepper-list" step="6">
+                <a class="mx-2">
+                    <span class="form-stepper-circle text-muted">
+                        <span>%60</span>
+                    </span>
+                </a>
+            </li>
+            <!-- Step 7 -->
+            <li class="form-stepper-unfinished text-center form-stepper-list" step="7">
+                <a class="mx-2">
+                    <span class="form-stepper-circle text-muted">
+                        <span>%70</span>
+                    </span>
+                </a>
+            </li>
+            <!-- Step 8 -->
+            <li class="form-stepper-unfinished text-center form-stepper-list" step="8">
+                <a class="mx-2">
+                    <span class="form-stepper-circle text-muted">
+                        <span>%80</span>
+                    </span>
+                </a>
+            </li>
+            <!-- Step 9 -->
+            <li class="form-stepper-unfinished text-center form-stepper-list" step="9">
+                <a class="mx-2">
+                    <span class="form-stepper-circle text-muted">
+                        <span>%90</span>
+                    </span>
+                </a>
+            </li>
+            <!-- Step 10 -->
+            <li class="form-stepper-unfinished text-center form-stepper-list" step="10">
+                <a class="mx-2">
+                    <span class="form-stepper-circle text-muted">
+                        <span>%100</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <!-- Step Wise Form Content -->
+        <form id="userAccountSetupForm" name="userAccountSetupForm" onsubmit="addCarbonFootInfo(event)">
+            <!-- Step 1 Content -->
+            <section id="step-1" class="form-step">
+                <div class="cart">
+                    <div class="cart-body">
+                        <p>How much meat have you eaten this month?</p>
+
+                        <select name="meatConsumption" class="answer-dropdown">
+                            <option value="0">None </option>
+                            <option value="1">Less than 5 kg</option>
+                            <option value="2">Less than 10 kg</option>
+                            <option value="3">Less than 15 kg</option>
+                            <option value="3">More than 15 kg</option>
+                        </select>
+                        <p class="tips">It is good for the environment if the products and light bulbs you use in your
+                            home
+                            are energy friendly.</p>
+                    </div>
+                    <div class="cart-image">
+                        <img src="./img/meat.jpg" alt="image" width="400">
+                    </div>
+                </div>
+                <button class="button btn-navigate-form-step btn-next" type="button" step_number="2">Next</button>
+            </section>
+
+            <!-- Step 2 Content, default hidden on page load. -->
+            <section id="step-2" class="form-step d-none">
+                <div class="cart">
+                    <div class="cart-body">
+                        <p>How would you rate your household's water conservation efforts on a scale from 1 to 10?</p>
+
+                        <input type="number" name="publicTransportDistance" placeholder="Enter distance in kilometres">
+                        <p class="tips">It is good for the environment if the products and light bulbs you use in your
+                            home
+                            are energy friendly.</p>
+                    </div>
+                    <div class="cart-image">
+                        <img src="./img/water.jpg" alt="Car Image" width="400">
+                    </div>
+
+                </div>
+                <button class="button btn-navigate-form-step btn-prev" type="button" step_number="1">Prev</button>
+                <button class="button btn-navigate-form-step btn-next" type="button" step_number="3">Next</button>
+            </section>
+            <!-- Step 3 Content, default hidden on page load. -->
+            <section id="step-3" class="form-step d-none">
+                <div class="cart">
+                    <div class="cart-body">
+                        <p>On a scale from 1 to 10, how often do you use environmentally friendly cleaning products in
+                            your home?</p>
+                        <input type="number" name="waterConsumption" placeholder="Enter water consumption in litres">
+                        <p class="tips">It is good for the environment if the products and light bulbs you use in your
+                            home
+                            are energy friendly.</p>
+                    </div>
+                    <div class="cart-image">
+                        <img src="./img/produckt.jpeg" alt="image" width="400">
+                    </div>
+                </div>
+                <button class="button btn-navigate-form-step btn-prev" type="button" step_number="2">Prev</button>
+                <button class="button btn-navigate-form-step btn-next" type="button" step_number="4">Next</button>
+
+            </section>
+            <!-- Step 4 Content, default hidden on page load. -->
+            <section id="step-4" class="form-step d-none">
+                <div class="cart">
+                    <div class="cart-body">
+                        <p>How would you rate the frequency of using public transportation or carpooling instead of
+                            driving alone on a scale from 1 to 10?</p>
+                        <input type="number" name="meatConsumption" placeholder="Enter kilograms">
+                        <p class="tips">It is good for the environment if the products and light bulbs you use in your
+                            home
+                            are energy friendly.</p>
+                    </div>
+                    <div class="cart-image">
+                        <img src="./img/alone.jpeg" alt="image" width="400">
+                    </div>
+                </div>
+                <button class="button btn-navigate-form-step btn-prev" type="button" step_number="3">Prev</button>
+                <button class="button btn-navigate-form-step btn-next" type="button" step_number="5">Next</button>
+
+
+            </section>
+            <!-- Step 5 Content, default hidden on page load. -->
+            <section id="step-5" class="form-step d-none">
+                <div class="cart">
+                    <div class="cart-body">
+                        <p>On a scale of 1 to 10, how often do you opt for walking or cycling over using a motor vehicle
+                            for short trips?</p>
+                        <input type="number" name="electricityHousehold">
+                        <p class="tips">It is good for the environment if the products and light bulbs you use in
+                            your home
+                            are energy
+                            friendly.</p>
+                    </div>
+                    <div class="cart-image">
+                        <img src="./img/cycling.jpeg" alt="image" width="400">
+
+                    </div>
+                </div>
+                <button class="button btn-navigate-form-step btn-prev" type="button" step_number="4">Prev</button>
+                <button class="button btn-navigate-form-step btn-next" type="button" step_number="6">Next</button>
+
+
+            </section>
+            <!-- Step 6 Content, default hidden on page load. -->
+            <section id="step-6" class="form-step d-none">
+                <div class="cart">
+                    <div class="cart-body">
+                        <p>Rate from 1 to 10 how often you choose sustainable options like trains or buses for
+                            long-distance travel instead of flying.</p>
+                        <input type="number" name="travelledKilometers">
+                        <p class="tips">It is good for the environment if the vehicles you use are energy efficient.
+                        </p>
+                    </div>
+                    <div class="cart-image">
+                        <img src="./img/subway.jpg" alt="image" width="400">
+                    </div>
+                </div>
+                <button class="button btn-navigate-form-step btn-prev" type="button" step_number="5">Prev</button>
+                <button class="button btn-navigate-form-step btn-next" type="button" step_number="7">Next</button>
+
+            </section>
+            <!-- Step 7 Content, default hidden on page load. -->
+            <section id="step-7" class="form-step d-none">
+                <div class="cart">
+                    <div class="cart-body">
+
+                        <p>
+
+                            On a scale from 1 to 10, how often do you recycle?</p>
+                        <input type="number" name="flightDistance" placeholder="Enter average distance in km">
+
+                        <p class="tips">It is good for the environment if the products and light bulbs you use in your
+                            home
+                            are energy friendly.</p>
+                    </div>
+
+                    <div class="cart-image">
+                        <img src="./img/recycled.jpg" alt="image" width="400">
+                    </div>
+                </div>
+
+                <button class="button btn-navigate-form-step btn-prev" type="button" step_number="6">Prev</button>
+                <button class="button btn-navigate-form-step btn-next" type="button" step_number="8">Next</button>
+
+
+
+            </section>
+            <!-- Step 8 Content, default hidden on page load. -->
+            <section id="step-8" class="form-step d-none">
+                <div class="cart">
+                    <div class="cart-body">
+                        <p>How would you rate your commitment to buying locally produced goods on a scale from 1 to 10?
+                        </p>
+                        <input type="number" name="woodConsumption" placeholder="Enter amount in kg">
+                        <p class="tips">It is good for the environment if the products and light bulbs you use in your
+                            home
+                            are energy friendly.</p>
+                    </div>
+
+                    <div class="cart-image">
+                        <img src="./img/local.jpeg" alt="image" width="400">
+                    </div>
+                </div>
+                <button class="button btn-navigate-form-step btn-prev" type="button" step_number="7">Prev</button>
+                <button class="button btn-navigate-form-step btn-next" type="button" step_number="9">Next</button>
+
+            </section>
+            <!-- Step 9 Content, default hidden on page load. -->
+            <section id="step-9" class="form-step d-none">
+                <div class="cart">
+                    <div class="cart-body">
+
+                        <p>On a scale of 1 to 10, how frequently do you engage in meatless meals to reduce your
+                            environmental impact?</p>
+                        <input type="number" name="publicTransportDistance" placeholder="Enter distance in kilometres">
+                        <p class="tips">Recycling reduces the carbon footprint by saving energy and preventing waste
+                            from
+                            going to landfills, where it can produce methane, a potent greenhouse gas.</p>
+                    </div>
+                    <div class="cart-image">
+                        <img src="./img/plant.jpg" alt="image" width="400">
+                    </div>
+                </div>
+
+                <button class="button btn-navigate-form-step btn-prev" type="button" step_number="8">Prev</button>
+                <button class="button btn-navigate-form-step btn-next" type="button" step_number="10">Next</button>
+
+
+            </section>
+            <!-- Step 10 Content, default hidden on page load. -->
+            <section id="step-10" class="form-step d-none">
+                <div class="cart">
+                    <div class="cart-body">
+
+
+                        <p>Rate your use of single-use plastics from 1 (very frequent) to 10 (never use them).</p>
+                        <input type="number" name="publicTransportDistance" placeholder="Enter distance in kilometres">
+                        <p class="tips">It is good for the environment if the products and light bulbs you use in your
+                            home
+                            are energy friendly.</p>
+                    </div>
+                    <div class="cart-image">
+                        <img src="./img/plastics.jpeg" alt="image" width="400">
+                    </div>
+
+                </div>
+                <button class="button btn-navigate-form-step btn-prev" type="button" step_number="9">Prev</button>
+                <button class="button submit-btn btn-next" type="submit">Submit</button>
+
+            </section>
+        </form>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="row">
+            <div class="col">
+                <img src="./img/Green Mark white.svg" class="logo">
+                <p>Every Step Counts Towards a Greener Tomorrow!</p>
+                <div class="social-icons">
+                    <a href="your-facebook-url"><i class="fab fa-facebook-f"></i></a>
+                    <a href="your-twitter-url"><i class="fab fa-twitter"></i></a>
+                    <a href="your-youtube-url"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="col">
+                <ul>
+                    <h3>Company<div class="under"><span></span></div>
+                    </h3>
+                    <li> <a href="">Home</a></li>
+                    <li> <a href="">Carboon Footprint Calculation</a></li>
+                    <li> <a href="">What is the Carbon Footprint?</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                    <h3>Contact <div class="under"><span></span></div>
+                    </h3>
+                    <li><a href="">Contact Us</a></li>
+                    <p class="email-id">greenmark@gmail.com</p>
+                    <h4>+47 000 00 000</h4>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Green Mark © 2024 - All Rights Reserved </p>
+    </footer>
+
+    <script src="./js/stepper.js"></script>
+
+</body>
+
+</html>
